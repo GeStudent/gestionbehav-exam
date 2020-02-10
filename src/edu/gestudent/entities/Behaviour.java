@@ -10,8 +10,75 @@ package edu.gestudent.entities;
  * @author Asus
  */
 public class Behaviour {
+
     int idbeh;
     int attendance;
     int award;
-    
+
+    public Behaviour() {
+    }
+
+    public Behaviour(int idbeh, int attendance, int award) {
+        this.idbeh = idbeh;
+        this.attendance = attendance;
+        this.award = award;
+    }
+
+    public int getIdbeh() {
+        return idbeh;
+    }
+
+    public void setIdbeh(int idbeh) {
+        this.idbeh = idbeh;
+    }
+
+    public int getAttendance() {
+        return attendance;
+    }
+
+    public void setAttendance(int attendance) {
+        this.attendance = attendance;
+    }
+
+    public int getAward() {
+        return award;
+    }
+
+    public void setAward(int award) {
+        this.award = award;
+    }
+
+    @Override
+    public String toString() {
+        return "Behaviour{" + "idbeh=" + idbeh + ", attendance=" + attendance + ", award=" + award + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 23 * hash + this.idbeh;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Behaviour other = (Behaviour) obj;
+        if (this.idbeh != other.idbeh) {
+            return false;
+        }
+        return true;
+    }
+
+ 
+
+
 }
